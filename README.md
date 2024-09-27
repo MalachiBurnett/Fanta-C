@@ -4,8 +4,8 @@ a basic programming language interpreter written in c++
 * #### initialise a variable:  
   * variable names can include characters from a-z and A-Z  
 * ##### strings:  
-  * if the value being initialised to a variable is in double quotes, it will be initialised as a string. for example:  
-    * example = "Hello World!"  
+  * if the value being initialised to a variable is in double quotes, it will be initialised as a string. for example:
+     example = "Hello World!"  
     any ascii charaters except for double quotes can be inside a string  
  ##### integers:  
     if the value being initialised to a variable consists of numbers 0-9, it will be initialised as an int. for example:  
