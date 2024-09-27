@@ -27,21 +27,21 @@ a basic programming language interpreter written in c++
   to define a label that you can jump to  
   to jump, use:  
   ```jump "lablename"```  
-#### conditions:  
+* #### conditions:  
   you can also jump if a condition is true:  
-    if condition jump "labelname"  
+  if condition jump "labelname"  
   conditions include:  
-    ==  
-    !=  
-    >=  
-    <=  
-    >  
-    <  
+    * ==  
+    * !=  
+    * \>=  
+    * \<=  
+    * \>  
+    * \<  
   string comparisons are not available yet. you can only compare integers  
- #### print:  
+ * #### print:  
     you can output to the console by writing:  
-      print "string"  
+      ```print "string"```  
     or  
-      print variable  
+      ```print variable```  
     this works for both integer variables and string variables  
     
