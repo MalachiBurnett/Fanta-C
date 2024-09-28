@@ -299,7 +299,7 @@ int main(int argc, char* argv[]) {
   }
   // If no file ending in ".fc" was found, use the default "test.fc"
   if (!found) {
-    Parse("test.fc");
+    cout << "Error: no .fc file found" << endl;
   }
   return 0;
 }
