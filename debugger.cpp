@@ -284,17 +284,21 @@ void Parse(string file) {
   }
 }
 
+bool debug = false;
+
 int main(int argc, char* argv[]) {
   //search parameters for a file ending in .fc
   //it is done this way because different compilers pass a different number of arguments before your argument
   bool found = false;
   for (int i = 0; i < argc; i++) {
-    std::string arg = argv[i];  // Convert C-style string to std::string
+    string arg = argv[i];  // Convert C-style string to string
     // Check if the last three characters are ".fc"
     if (arg.length() >= 3 && arg.substr(arg.length() - 3) == ".fc") {
       Parse(arg);
       found = true;
       break;
+    } else if (arg == "debug") {
+      debug = true;
     }
   }
   // If no file ending in ".fc" was found, use the default "test.fc"
