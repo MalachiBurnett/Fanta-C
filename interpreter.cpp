@@ -1,7 +1,6 @@
 #include <algorithm>
 #include <fstream>
 #include <iostream>
-#include <map>
 #include <stdexcept>
 #include <string>
 #include <vector>
@@ -11,18 +10,6 @@ using namespace std;
 // Function to check if a vector contains a specific value
 bool Contains(const vector<string> &vec, const string &value) {
   return find(vec.begin(), vec.end(), value) != vec.end();
-}
-
-// Function to print error messages based on an error code
-void Error(int code, string param) {
-  switch (code) {
-  case 1:
-    cout << "Lexer error: missing closing quote" << endl;
-    break;
-  case 2:
-    cout << "Unexpected token: " << param << endl;
-    break;
-  }
 }
 
 // Function to check if all characters in a string belong to a given set of
