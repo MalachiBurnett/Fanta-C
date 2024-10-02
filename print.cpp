@@ -1,15 +1,11 @@
 #include <iostream>
 #include <vector>
 #include "variables.hpp"
+#include "print.hpp"
 using namespace std;
-namespace print
+using namespace Print;
+
+void PrintHandler::Print(vector<string> token)
 {
-    class PrintHandler
-    {
-        Variables::VariableHandler VH;
-        public:
-        void Print(vector<string> token) {
-            cout << VH.GetStr(token);
-        }
-    };
+    cout << VH.GetStr(token);
 }

@@ -1,6 +1,6 @@
 #include "variables.hpp"
-namespace print {
-    class print {
+namespace Print {
+    class PrintHandler {
         Variables::VariableHandler VH;
         public:
         void Print(vector<string> token) {}
