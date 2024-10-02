@@ -5,9 +5,9 @@
 #include "error.hpp"
 using namespace std;
 
-namespace lexer
+namespace Lexer
 {
-    class lexer
+    class LexerHandler
     {
         Error::ErrorHandler EH;
         // Function to check if a vector contains a specific value
@@ -74,6 +74,7 @@ namespace lexer
             return result;
         }
 
+    public:
         // Lexer function to tokenize a code string into nested vectors
         vector<vector<vector<string>>> Lexer(string code)
         {
