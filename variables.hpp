@@ -1,5 +1,8 @@
+#ifndef VARIABLES_HPP
+#define VARIABLES_HPP
 #include <vector>
 #include <map>
+#include "error.hpp"
 using namespace std;
 namespace Variables {
     class VariableHandler {
@@ -12,3 +15,4 @@ namespace Variables {
         virtual int GetInt(vector<string> token) {return 0;}
     };
 }
+#endif

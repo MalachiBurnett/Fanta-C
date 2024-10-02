@@ -34,14 +34,18 @@ vector<string> LexerHandler::Split(string str, char delimiter)
 {
     vector<string> result = {};
     string tempStr = "";
-    int quotes = 0;
+    bool quotes = true;
+    bool brackets = true;
     for (int i = 0; i < str.size(); i++)
     {
         if (str.at(i) == '"')
         {
-            quotes += 1;
+            quotes = !quotes;
         }
-        if (str.at(i) == delimiter && quotes % 2 == 0)
+        if (str.at(i) == ')') {
+            brackets = !brackets;
+        }
+        if (str.at(i) == delimiter && quotes && brackets)
         {
             result.push_back(tempStr);
             tempStr = "";
@@ -55,7 +59,10 @@ vector<string> LexerHandler::Split(string str, char delimiter)
     {
         result.push_back(tempStr);
     }
-    if (quotes % 2 != 0)
+    if (!brackets) {
+        EH.Error(4, "");
+    }
+    if (!quotes)
     {
         EH.Error(2, "");
         return {};

@@ -14,5 +14,9 @@ void ErrorHandler::Error(int code, string parameter)
         break;
     case 3:
         cout << "Error: Unexpected token" << parameter << endl;
+        break;
+    case 4:
+        cout << "Error: Missing cloing brackets" << endl;
+        break;
     }
 }
