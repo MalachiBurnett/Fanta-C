@@ -5,7 +5,7 @@ namespace Print {
     class PrintHandler {
         Variables::VariableHandler VH;
         public:
-        void Print(vector<string> token) {}
+        virtual void Print(std::vector<std::string> token) {}
     };
 }
 #endif

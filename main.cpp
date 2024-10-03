@@ -1,4 +1,4 @@
-#include "parser.cpp"
+#include "parser.hpp"
 #include "lexer.hpp"
 #include <fstream>
 #include <iostream>
@@ -17,8 +17,8 @@ int main(int argc, char *argv[])
             ifstream inputCode(arg);
             string code;
             getline(inputCode, code, '\0');
-            inputCode.close();
             PH.Parse(LH.Lexer(code));
+            inputCode.close();
             found = true;
             break;
         }

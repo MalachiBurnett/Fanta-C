@@ -6,7 +6,7 @@ namespace Error
     class ErrorHandler
     {
     public:
-        void Error(int code, std::string parameter) {}
+        virtual void Error(int code, std::string parameter) {}
     };
 }
 #endif
