@@ -1,11 +1,5 @@
-#include <iostream>
-#include <vector>
-#include "variables.hpp"
 #include "print.hpp"
-using namespace std;
-using namespace Print;
-
-void PrintHandler::Print(vector<string> token)
-{
-    cout << VH.GetStr(token);
-}
+#include <iostream>
+void Print::Execute(Line ln) {
+    std::cout << ln.parameters.at(0).value;
+};
